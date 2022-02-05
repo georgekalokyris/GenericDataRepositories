@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SQLdatabase;
 
 namespace SQLdatabase.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20220205164500_removedSeed")]
+    partial class removedSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,20 +45,6 @@ namespace SQLdatabase.Migrations
                     b.HasIndex("countryId");
 
                     b.ToTable("Cities");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AreaCode = "000",
-                            Name = "Dream City"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AreaCode = "666",
-                            Name = "Gotham City"
-                        });
                 });
 
             modelBuilder.Entity("Common.Country", b =>

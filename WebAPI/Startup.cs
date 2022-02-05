@@ -37,11 +37,11 @@ namespace WebAPI
             });
 
             services.AddDbContext<ApplicationDBContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("ApplicationDBContect")));
+                    options.UseSqlServer(Configuration.GetConnectionString("ApplicationDBContext")));
 
             services.AddScoped<EFCoreCityRepository>();
-            services.AddScoped<EFCoreCountryRepository>();
-            services.AddScoped<EFCoreCasesRepository>();
+            //services.AddScoped<EFCoreCountryRepository>();
+            //services.AddScoped<EFCoreCasesRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +64,7 @@ namespace WebAPI
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }
