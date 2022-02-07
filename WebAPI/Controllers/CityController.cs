@@ -11,6 +11,8 @@ using SQLrepository.EFCore;
 
 namespace WebAPI.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CityController : BaseDBController<City, EFCoreCityRepository>
     {
         public CityController(EFCoreCityRepository repository) : base(repository)

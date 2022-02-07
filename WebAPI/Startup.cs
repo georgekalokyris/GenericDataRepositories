@@ -40,8 +40,8 @@ namespace WebAPI
                     options.UseSqlServer(Configuration.GetConnectionString("ApplicationDBContext")));
 
             services.AddScoped<EFCoreCityRepository>();
-            //services.AddScoped<EFCoreCountryRepository>();
-            //services.AddScoped<EFCoreCasesRepository>();
+            services.AddScoped<EFCoreCountryRepository>();
+            services.AddScoped<EFCoreCasesRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +52,7 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI v1"));
+
             }
 
             app.UseHttpsRedirection();

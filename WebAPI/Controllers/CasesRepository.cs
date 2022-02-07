@@ -11,11 +11,13 @@ using SQLrepository.EFCore;
 
 namespace WebAPI.Controllers
 {
-    //public class CasesRepository : BaseDBController<TotalCases, EFCoreCasesRepository>
-    //{
-    //    public CasesRepository(EFCoreCasesRepository repository) : base(repository)
-    //    {
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CasesRepository : BaseDBController<TotalCases, EFCoreCasesRepository>
+    {
+        public CasesRepository(EFCoreCasesRepository repository) : base(repository)
+        {
 
-    //    }
-    //}
+        }
+    }
 }
