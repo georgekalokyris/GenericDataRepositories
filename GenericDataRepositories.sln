@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLrepository", "SQLreposit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLdatabase", "SQLdatabase\SQLdatabase.csproj", "{6E0F24F7-7B96-444D-92B6-B83ABB184313}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppHelper", "ConsoleAppHelper\ConsoleAppHelper.csproj", "{9AA7F98C-21C1-4445-87E4-58F07CC83F1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6E0F24F7-7B96-444D-92B6-B83ABB184313}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E0F24F7-7B96-444D-92B6-B83ABB184313}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E0F24F7-7B96-444D-92B6-B83ABB184313}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AA7F98C-21C1-4445-87E4-58F07CC83F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA7F98C-21C1-4445-87E4-58F07CC83F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA7F98C-21C1-4445-87E4-58F07CC83F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA7F98C-21C1-4445-87E4-58F07CC83F1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
