@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Common;
+using System.IO;
+using SQLdatabase.Data.CountriesJSON;
+using static SQLdatabase.Data.CountriesJSON.CountriesJSON;
+using Newtonsoft.Json;
 
 namespace SQLdatabase.Data
 {
@@ -26,6 +30,24 @@ namespace SQLdatabase.Data
                     AreaCode = "666"
                 }
                 );
+        }
+        
+        public static void SeedCountries(this ModelBuilder modelBuilder)
+        {
+            string json = File.ReadAllText(System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "./Data/CountriesJSON/countries.json"));
+
+            List<CountryJSON> countries = new List<CountryJSON>();
+
+            countries = JsonConvert.DeserializeObject<List<CountryJSON>>(json);
+
+            
+            for (int i = 0; i < countries.Count; i++)
+            {
+                modelBuilder.Entity<Country>().HasData
+                (
+                    new Country() { Id = i+1, Name = countries[i].name.common, Continent = countries[i].continents[0] }
+                );
+            }
         }
     }
 }

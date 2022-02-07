@@ -19,13 +19,13 @@ namespace DeserializeLearning
             //Console.WriteLine(list[0].address.address1);
 
 
-            string json2 = File.ReadAllText(System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "countries.json"));
+            string json2 = File.ReadAllText(System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "./JSONfiles/countries.json"));
 
             List<CountryJSON> countries = new List<CountryJSON>();
 
             countries = JsonConvert.DeserializeObject<List<CountryJSON>>(json2);
 
-            //Console.WriteLine(String.Concat(json2));
+            Console.WriteLine(String.Concat(json2));
             foreach (var country in countries)
             {
                 if (country.continents.Count > 2)

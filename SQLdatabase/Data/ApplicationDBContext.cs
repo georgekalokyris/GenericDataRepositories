@@ -22,7 +22,8 @@ namespace SQLdatabase
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Seed();
+            //modelBuilder.Seed();
+            modelBuilder.SeedCountries();
         }
     }
 }
